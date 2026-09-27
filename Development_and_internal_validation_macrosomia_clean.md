@@ -73,7 +73,7 @@ This was a secondary analysis of the prospective Nulliparous Pregnancy Outcomes 
 
 ## 2.2 Outcomes
 
-The primary outcomes were birthweight \>4000 g and \>4500 g. These thresholds were selected because they are widely used absolute definitions of macrosomia and represent clinically relevant degrees of fetal overgrowth. Separate prediction models were developed for each threshold. <span style="color:red">Both thresholds were applied as birthweight greater than 4000 g and greater than 4500 g throughout the analysis.</span>
+The primary outcomes were birthweight \>4000 g and \>4500 g. These thresholds were selected because they are widely used absolute definitions of macrosomia and represent clinically relevant degrees of fetal overgrowth. Separate prediction models were developed for each threshold.
 
 Because absolute birthweight thresholds do not account for gestational age at delivery, we additionally performed sensitivity analyses using large-for-gestational-age birthweight. LGA90 and LGA97 were defined as birthweight above the 90th and 97th percentiles, respectively, for gestational age at delivery and neonatal sex according to the INTERGROWTH-21st Newborn Size Standards <span style="color:red">\[20\]</span>. These analyses assessed whether the visit-updated prediction pattern was consistent when fetal overgrowth was defined relative to gestational age rather than by fixed birthweight thresholds.
 

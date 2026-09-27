@@ -12,7 +12,7 @@
 | 摘要 Results | AUROC 0.75 改为 0.74；删去 "comparable to WHO"，改为"M1 为 0.64/0.73，低于最强的 Visit 3 WHO 指标" | 编辑第 3 点；审稿人 comparability |
 | 摘要 Conclusion | 加 "in internal validation" | 编辑第 3 点 |
 | 2.1 | 说明四个模型都在同一分析队列中开发和评估；引用 Table 2 | 编辑第 1、3 点 |
-| 2.2 | 写明阈值一律为"大于"；补 INTERGROWTH-21st newborn 文献 [20] | 审稿人 minor（阈值、文献） |
+| 2.2 | 补 INTERGROWTH-21st newborn 文献 [20]（阈值 > 与 ≥ 的问题在回复信中说明，正文不另加句子） | 审稿人 minor（阈值、文献） |
 | 2.3 | 删去 gravidity 和 fetal sex；补全 Visit 1 的测量项目；说明不纳入 fetal sex 和 GDM 的理由；列出 25 个饮食变量；补 Visit 3 的 AFI 四个象限和 EFW 百分位；说明 Visit 2 EFW 百分位和 Doppler 未纳入；补变量编码方式；引用 Table 2 | 编辑第 1 点；审稿人 predictor reporting、leakage |
 | 2.4 | 说明与 WHO 的比较是描述性的，不做检验；补 INTERGROWTH fetal 文献 [28,29]；说明 Visit 2 EFW 百分位只适用于 18 周以后 | 编辑第 2 点；审稿人 Mann–Whitney、S11 |
 | 2.5 第 1 段 | 按 42/51/56/65 重写模型定义（M3 = M1 + Visit 3）；说明 M1 的评估人群 | 编辑第 1、3 点 |

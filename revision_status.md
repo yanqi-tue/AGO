@@ -18,7 +18,7 @@
 | 变量组 | 个数 | 内容 |
 |---|---:|---|
 | 人口学与病史 | 9 | 年龄；种族 4 项（NH White、NH Black、Hispanic、Asian/Other）；收入；孕前 3 个月吸烟；孕前 BMI；孕前糖尿病 |
-| 围孕期饮食 | 25 | HEI-2010 和 AHEI-2010 的组分（以及总分），具体清单【待补】 |
+| 围孕期饮食 | 25 | HEI-2010 的 12 个组分（Total Vegetables；Vegetables & Legumes；Total Fruit；Whole Fruit；Whole Grains；Milk；Meat and Beans；Seafood & Plant Protein；Fatty Acid Ratio；Sodium；Refined Grains；SoFAAS Cals）＋ HEI 总分；AHEI-2010 的 11 个组分（Vegetable；Fruit；Whole grain；Sugary beverages；Nuts and legumes；Red meats；Trans-fat；DHA & EPA；Polyunsaturated fat；Sodium；Alcoholic drinks）＋ AHEI 总分 |
 | Visit 1 母体测量 | 8 | BMI；GWG；腰围；髂嵴上腰围；臀围；颈围；SBP；DBP |
 | Visit 2 母体测量 | 3 | GWG；SBP；DBP |
 | Visit 2 超声 | 6 | GA；BPD；HC；AC；FL；EFW（克） |
@@ -187,6 +187,16 @@
 - **>4500 g Combined：**前 20% 捕获 54/77，敏感度 70.1%，PPV 4.2%；前 10% 捕获 35/77，敏感度 45.5%，PPV 5.5%。
 - 旧稿写的是"两个模型在前 20% 都捕获 51/77"，现在 M3 和 Combined 不再相同，需要分开写。
 
+### G3. S11 补充：Visit 2 INTERGROWTH-21st EFW 百分位
+
+| 结局 | 分析人数 | 事件数 | 缺失比例 | AUROC (95% CI) |
+|---|---:|---:|---:|---|
+| >4000 g | 3,834 | 320 | 39.8% | 0.609 (0.577–0.640) |
+| >4500 g | 3,834 | 48 | 39.8% | 0.628 (0.545–0.713) |
+
+- 分析人数只有 3,834 人，与其他比较指标（6,371 人）不同，S11 的表注里要写明。
+- 缺失原因待作者确认：是孕周超出标准的适用范围，还是输入的测量值本身缺失？
+
 ### H. WHO 描述性对照（数值不变）
 
 - **M1**：>4000 g 为 0.638，>4500 g 为 0.731。
@@ -200,15 +210,15 @@
 | # | 内容 | 用途 |
 |---|---|---|
 | 1 | >4500 g Combined − M3 的配对 bootstrap 区间（`*`） | Δ 表 |
-| 2 | 25 个饮食变量的完整清单，以及总分是否与组分一起入模 | 模型定义表、S10 |
+| 2 | ~~饮食变量清单~~ → **已完成**（25 个；含 HEI 和 AHEI 两个总分，与组分一起入模） | — |
 | 3 | ~~训练–验证差距表~~ → **已删除，不报告**（编辑和审稿人均未要求） | — |
 | 4 | ~~>4000 g Platt 校准~~ → **已完成**（见 D 表，含 LGA；不报 CI）。待确认：截距/CITL 定义；Figure S2 Platt 图例 Brier 与 D 表一致 | S4、S5 |
 | 5 | ~~LGA 判别力~~ → **已完成**（见 G 表） | — |
 | 6 | ~~S8 阈值分析~~ → **已完成**（见 G2 表，32 行） | — |
 | 7 | ~~Platt DCA 图~~ → **已完成**（grade 已改，放在附录） | — |
-| 8 | 荷兰队列本次分析的信息：N、>4000 g 和 >4500 g 事件数与患病率、所用变量、变量协调方式、缺失处理、模型是冻结系数直接套用还是重新校准或重拟合、AUROC 的 95% CI、校准（如有）、伦理与数据使用许可 | S13、方法、TRIPOD 16/20c |
+| 8 | 荷兰队列本次分析的信息：N、>4000 g 和 >4500 g 事件数与患病率、所用变量、变量协调方式、缺失处理、模型是冻结系数直接套用还是重新校准或重拟合、AUROC 的 95% CI、校准（如有）、伦理与数据使用许可 | S13、方法、TRIPOD 16/20c。来源：Wu Y, et al. BMC Res Notes 2024;17:105（doi:10.1186/s13104-024-06758-z）。当前环境无法访问 springer / biomedcentral / PMC，需作者粘贴原文相关段落或放入仓库 |
 | 9 | 酒精分析：暴露组 N 与事件数、"moderate" 的定义、调整变量、缺失处理、不确定性、多重比较方法；Figures 5–6 是否用去掉 fetal sex 后的 M1 重算 | Supplement |
-| 10 | S11 Visit 2 INTERGROWTH EFW 数据（含缺失率） | S11 |
+| 10 | ~~S11 Visit 2 EFW~~ → **已收到**（见 G3 表）；待确认缺失原因 | S11 |
 | 11 | 2.5 节方法正文（作者撰写） | 正文 |
 | 12 | 非线性模型 S9 是否用新配置重算（`-real` 清单中推迟的事项） | S9 |
 

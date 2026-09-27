@@ -49,7 +49,7 @@
 - **Mann–Whitney 检验**：全部删除。WHO 指标只作描述性基准，不再对 5 个 AUROC 取平均，不再称 M1 与 WHO "comparable"。
 - **>4500 g**：不整体降为 exploratory，但全文谨慎解读，用复杂度分析支撑。措辞不说"排除了过拟合"。
 - **荷兰队列**：保留，降级为 "limited independent evaluation of a reduced harmonizable early-pregnancy predictor set"。cohort 背景引用 BMC Res Notes 2024;17:105；本次分析的具体信息在本文中直接报告。
-- **酒精分析**：保留，但明显压缩，定位为 exploratory secondary analysis。图移到 Supplement；不再称为 negative control 可排除混杂。
+- **酒精分析**：只做降调，不新增分析。现有内容保持不变：调整变量为 age、BMI、income、race/ethnicity、smoking、gravidity、preexisting diabetes；比较 moderate periconceptional alcohol intake 与 non-alcohol；aOR 2.76 (1.31–5.83)；对 gestational age / preterm / early-term 做 negative-control-type 敏感性分析。与 fetal sex 无关，Figures 5–6 不重算。定位为 exploratory secondary analysis，图移到 Supplement，不再宣称能排除残余混杂。（注：gravidity 在这里只是调整变量，不与预测模型中删除 gravidity 冲突。）
 - **M1 的选择性人群**：不做新的分析，只在 Results 和 Limitations 中明确说明评估人群是完整随访队列。
 - **Table 1**：显著性标记依据 FDR 校正后的 q 值，表注据此修改。
 - **临床意义措辞**：删除 "clinically useful / meaningful / clinical utility / prespecified"，改用中性表述。
@@ -197,6 +197,25 @@
 - 分析人数只有 3,834 人，与其他比较指标（6,371 人）不同，S11 的表注里要写明。
 - 缺失原因待作者确认：是孕周超出标准的适用范围，还是输入的测量值本身缺失？
 
+### G4. 荷兰 MMC 队列（来自 Wu et al. BMC Res Notes 2024;17:105，doi:10.1186/s13104-024-06758-z）
+
+**文章中能直接引用的队列信息：**
+- 回顾性 EMR 数据，Máxima Medical Center（荷兰 Veldhoven），分娩时间为 2012 年 1 月至 2017 年 12 月。
+- 纳入标准：在 MMC 分娩且有产科记录；年龄 18–45 岁；孕前无 1 型或 2 型糖尿病。共 14,015 名孕妇，15,709/15,837 条分娩记录。
+- **队列同时包含初产妇和经产妇**（初产约 53%）；同一孕妇的多次分娩记录在划分时保持在同一集合。
+- 早孕可协调的变量：年龄、孕前 BMI、种族（协调为 NH White/Black、Hispanic/Mediterranean、Asian、Rest 四类）、孕次（gravidity）。parity 和 GDM 史在 nuMoM2b 中不适用。
+- MMC 的孕前 BMI 来自自报的非孕体重，具体时间不明；很多人第一次测 BMI 已在 20 周以后。
+- 伦理：原文 Methods 写的是 MMC 医学伦理委员会给予豁免（waiver），Declarations 写的是 MMC Medical Ethics Review Committee 批准回顾性分析。本文建议写作 "the Medical Ethics Review Committee of MMC approved the retrospective analysis and waived the requirement for informed consent"（措辞待作者确认）。
+- 数据可得性：MMC 数据因隐私规定不公开，联系 x.long@tue.nl。
+
+**文章里没有、必须由作者提供的**（原文研究对象是 GDM，不涉及出生体重）：
+1. 本次巨大儿分析的 N：是否只纳入初产妇？是否每名孕妇只取一条记录？
+2. >4000 g 和 >4500 g 的事件数与患病率。
+3. 实际使用的变量（年龄、BMI、种族、孕次？），以及出生体重的缺失处理。
+4. 模型应用方式：用 nuMoM2b 的系数和截距冻结后直接套用，还是在 MMC 中重新校准或重新拟合？
+5. AUROC 的 95% CI（S13 中的 0.60 和 0.64），以及校准结果（如果有）。
+6. S13 中 "comparable MMC model, internal validation"（0.61 和 0.63）是怎样划分数据的。
+
 ### H. WHO 描述性对照（数值不变）
 
 - **M1**：>4000 g 为 0.638，>4500 g 为 0.731。
@@ -216,8 +235,8 @@
 | 5 | ~~LGA 判别力~~ → **已完成**（见 G 表） | — |
 | 6 | ~~S8 阈值分析~~ → **已完成**（见 G2 表，32 行） | — |
 | 7 | ~~Platt DCA 图~~ → **已完成**（grade 已改，放在附录） | — |
-| 8 | 荷兰队列本次分析的信息：N、>4000 g 和 >4500 g 事件数与患病率、所用变量、变量协调方式、缺失处理、模型是冻结系数直接套用还是重新校准或重拟合、AUROC 的 95% CI、校准（如有）、伦理与数据使用许可 | S13、方法、TRIPOD 16/20c。来源：Wu Y, et al. BMC Res Notes 2024;17:105（doi:10.1186/s13104-024-06758-z）。当前环境无法访问 springer / biomedcentral / PMC，需作者粘贴原文相关段落或放入仓库 |
-| 9 | 酒精分析：暴露组 N 与事件数、"moderate" 的定义、调整变量、缺失处理、不确定性、多重比较方法；Figures 5–6 是否用去掉 fetal sex 后的 M1 重算 | Supplement |
+| 8 | 荷兰队列：已读 BMC 原文（见 G4 表）。**仍需作者提供本次巨大儿分析的具体信息**（G4 表中第 1–6 项） | S13、方法、TRIPOD 16/20c |
+| 9 | ~~酒精分析~~ → **只做降调，不新增分析**（见第一部分第 4 节） | — |
 | 10 | ~~S11 Visit 2 EFW~~ → **已收到**（见 G3 表）；待确认缺失原因 | S11 |
 | 11 | 2.5 节方法正文（作者撰写） | 正文 |
 | 12 | 非线性模型 S9 是否用新配置重算（`-real` 清单中推迟的事项） | S9 |

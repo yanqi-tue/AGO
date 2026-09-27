@@ -142,11 +142,11 @@ Brier 值暂取自 `Figure_S2_platt_seed0.svg` 的图例，只有 4 位小数。
 |---|---|---|
 | 1 | >4500 g Combined − M3 的配对 bootstrap 区间（`*`） | Δ 表 |
 | 2 | 25 个饮食变量的完整清单，以及总分是否与组分一起入模 | 模型定义表、S10 |
-| 3 | 训练–验证差距表，按版本 A 口径重算（训练 AUROC、验证 AUROC、差距） | 复杂度分析 |
-| 4 | >4000 g 的 Platt 校准：slope（CI）、CITL、O/E、精确 Brier | S5、scaled Brier |
+| 3 | ~~训练–验证差距表~~ → **已删除，不报告**（编辑和审稿人均未要求） | — |
+| 4 | >4000 g 的 Platt 校准（4 个模型）：slope (95% CI)、CITL、O/E、5 位小数 Brier；如有，补 CITL/Brier 的 95% CI（>4500 g 同样） | S5、scaled Brier |
 | 5 | LGA90/LGA97 全部 4 个模型的 AUROC、AUPRC 和 Platt 校准结果 | S4 |
 | 6 | Platt 阈值分析（上五分位、上十分位；4 个结局 × 4 个模型） | S8、3.2 节 |
-| 7 | Platt DCA 图（修正图中 grade 标注） | S5 图 |
+| 7 | ~~Platt DCA 图~~ → **已完成**（grade 已改，放在附录） | — |
 | 8 | 荷兰队列本次分析的信息：N、>4000 g 和 >4500 g 事件数与患病率、所用变量、变量协调方式、缺失处理、模型是冻结系数直接套用还是重新校准或重拟合、AUROC 的 95% CI、校准（如有）、伦理与数据使用许可 | S13、方法、TRIPOD 16/20c |
 | 9 | 酒精分析：暴露组 N 与事件数、"moderate" 的定义、调整变量、缺失处理、不确定性、多重比较方法；Figures 5–6 是否用去掉 fetal sex 后的 M1 重算 | Supplement |
 | 10 | S11 Visit 2 INTERGROWTH EFW 数据（含缺失率） | S11 |

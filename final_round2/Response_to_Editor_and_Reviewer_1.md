@@ -136,7 +136,7 @@ We agree and have removed all Mann–Whitney comparisons from Table 3 (previousl
 
 Comparisons between the prediction models are now based on participant-level paired bootstrap differences in AUROC, as suggested. For example, for birthweight >4000 g:
 
-*"Compared with Model 1 (0.628, 0.602–0.651), the paired AUROC difference was 0.105 (0.081–0.128) for Model 3 and 0.104 (0.081–0.129) for the Combined model. Model 2 (0.651, 0.625–0.674) showed a smaller improvement over Model 1 (difference 0.024, 0.013–0.037), and the Combined model did not improve on Model 3 (difference −0.001, −0.004 to 0.002)."* (Section 3.2, lines XX–XX)
+*"Compared with Model 1 (0.628, 0.602–0.651), the paired AUROC difference was 0.105 (0.081–0.128) for Model 3 and 0.104 (0.081–0.129) for the Combined model. Model 2 (0.651, 0.625–0.674) showed a smaller improvement over Model 1 (difference 0.023, 0.013–0.037), and the Combined model did not improve on Model 3 (difference −0.001, −0.004 to 0.002)."* (Section 3.2, lines XX–XX)
 
 The paired differences for all model comparisons are provided in Supplementary Table S5.
 
@@ -152,15 +152,15 @@ The results are reported in Section 3.2 and in the new Supplementary Table S13:
 
 *"In the model-complexity analysis for birthweight >4500 g (Supplementary Table S13), the local approximate effective degrees of freedom of the penalized Combined model was 24.2, compared with 65 candidate predictors. Retaining 13 or 10 predictors selected within each training fold reduced the effective degrees of freedom to 3.7 and 3.0, respectively, with AUROCs of 0.813 (0.764–0.859) and 0.803 (0.752–0.851), compared with 0.821 (0.778–0.866) for the full model within the same framework. The paired AUROC differences relative to the full model were −0.008 (−0.037 to 0.018) and −0.018 (−0.050 to 0.014), and calibration slopes after Platt recalibration were 1.056 and 1.010, respectively."* (Section 3.2, lines XX–XX)
 
-The reported effective degrees of freedom and calibration measures were obtained from a separate 30-repetition run, with calibration assessed using participant-level mean Platt-recalibrated out-of-fold probabilities. The effective degrees of freedom are a local approximation for a given set of active predictors and do not account for the full variable-selection process. Selection was performed within each outer training fold, so validation assessed the complete selection-and-fitting procedure. The reduced models were still developed from a pool of 65 candidate predictors.
+The reported effective degrees of freedom and calibration measures were obtained from a separate 30-repetition run, with calibration assessed using participant-level mean Platt-recalibrated out-of-fold probabilities. The effective degrees of freedom are a local approximation for a given set of active predictors and do not account for the full variable-selection process. Because the predictors were selected within each outer training fold, the AUROCs of the reduced models already include the optimism introduced by selection.
 
 **4.2** *"The calibration slopes of only 0.485–0.703 for the models predicting birthweight above 4500 g reinforce this concern."*
 
-We thank the reviewer for this comment. These slopes were obtained with isotonic recalibration, which, as the reviewer notes under Comment 5, is unlikely to be stable for this outcome. After cross-fitted Platt recalibration, with one prediction per participant, the calibration slopes for birthweight >4500 g ranged from 0.992 to 1.016 (Supplementary Table S5). These estimates characterize the recalibrated prediction procedure.
+We thank the reviewer for this comment. These slopes were obtained with isotonic recalibration, which, as the reviewer notes under Comment 5, is unlikely to be stable for this outcome. After cross-fitted Platt recalibration, with one prediction per participant, the calibration slopes for birthweight >4500 g ranged from 0.992 to 1.016 (Supplementary Table S5).
 
 **4.3** *"The authors should consider substantially simplifying these models or explicitly classifying the 4500-g analyses as exploratory."*
 
-We have considered this suggestion carefully. In the model-complexity analysis, models with 10–13 predictors selected within the training folds and approximately 3–4 local effective degrees of freedom retained most of the discrimination observed for the full model. The paired confidence intervals also allow for a loss of discrimination, so these results do not establish equivalence or exclude overfitting. They support our decision to retain the same four model definitions across outcomes, with cautious interpretation of the >4500 g results.
+We have considered this suggestion carefully. In the model-complexity analysis, models with 10–13 predictors selected within the training folds and approximately 3–4 local effective degrees of freedom retained most of the discrimination observed for the full model, with paired confidence intervals for the difference from the full model that included zero. We therefore do not think that the discrimination for birthweight >4500 g is mainly an artefact of the number of candidate predictors. For comparability with the other outcomes, we have retained the same four model definitions for this outcome, with cautious interpretation of the >4500 g results.
 
 We agree that estimates based on 77 events are imprecise. In keeping with the Editor's request for cautious interpretation, we have made this limitation explicit:
 

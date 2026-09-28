@@ -15,7 +15,7 @@
 | 2.3 | 删去 gravidity 和 fetal sex；Visit 1 补 GWG；一句话说明 fetal sex 和 GDM 不作为预测变量；一句话说明两个指数的组分和总分都进入模型；Visit 3 补 AFI 四个象限和 EFW 百分位；Doppler 一句去掉 "from Visit 1"；一句话说明变量编码，并引用 Table 2 | 编辑第 1 点；审稿人 predictor reporting、leakage |
 | 2.4 | 补"与模型的比较为描述性"；补 INTERGROWTH fetal 文献 [28,29]；一句话说明 Visit 2 EFW 百分位只适用于 18 周以后 | 编辑第 2 点；审稿人 Mann–Whitney、S11 |
 | 2.5 第 1 段 | 保留原句式，只改三处：Model 3 改为 "extended Model 1"；Combined 改为 "Visit 1、2、3 全部信息"；各模型补变量数；末尾补一句"四个模型在同一队列中开发和评估，以便直接比较" | 编辑第 1 点 |
-| 2.5 第 2–3 段 | **【作者复核】**验证流程按 `revision_status.md` 起草，请用作者定稿的 2.5 节替换，或逐句核对 | 编辑第 2 点 |
+| 2.5 第 2–3 段 | 保留原句（1000 次重复；训练数据内调参；平方根类别权重）；新增：受试者层面平均预测、受试者层面 bootstrap、配对 bootstrap；isotonic 改为 Platt（在训练折内拟合），校准、阈值和 DCA 基于单次完整 10 折；isotonic 作敏感性分析 | 编辑第 2 点；审稿人 Comment 3、5 |
 | 2.5 第 4 段 | 补 scaled Brier、CITL、O/E；"prespecified risk-stratification thresholds" 改为 "fixed risk strata"；补一句"另做了 DCA" | 审稿人 calibration、prespecified |
 | 2.5 第 5–6 段 | 一句话说明总分与组分同时入模，饮食系数不能作为独立效应解释；LGA 的 CI 改为"按上文方法计算" | 审稿人 predictor reporting |
 | 2.6 | 按 Riley 报告候选变量数和每个变量对应的事件数；复杂度分析的方法；"(q<0.05)"；MMC 有限评估的方法（两句） | 编辑第 3、4 点；审稿人 77 events、external evaluation |

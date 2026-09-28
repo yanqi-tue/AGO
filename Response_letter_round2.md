@@ -8,13 +8,13 @@ We have revised the manuscript in line with the five points raised in your lette
 
 **1. Definition of the four models and time of availability of predictors**
 
-We have added a new Table 2, which lists every predictor included in Model 1, Model 2, Model 3, and the Combined model, together with its time of availability. The model definitions in Section 2.5 have been corrected so that they are consistent with this table and with the Supplementary Material: Model 3 extends Model 1 with Visit-3 information, and only the Combined model includes information from both Visit 2 and Visit 3 (42, 51, 56, and 65 predictors, respectively).
+We have added a new Table 2, which lists every predictor included in Model 1, Model 2, Model 3, and the Combined model, together with its time of availability. The model definitions in Section 2.5 have been revised so that they are consistent with this table and with the Supplementary Material: Model 3 extends Model 1 with Visit-3 information, and only the Combined model includes information from both Visit 2 and Visit 3 (42, 51, 56, and 65 predictors, respectively).
 
 We also re-examined the time of availability of each predictor. Because the time at which fetal sex was ascertained is not documented in the nuMoM2b dataset, we could not confirm that it was available at the intended prediction time. We therefore removed fetal sex from all models. Gestational diabetes mellitus, which had been included among the Visit-2 predictors of Model 2 and the Combined model, was also removed because it is usually diagnosed after the second-trimester visit. All analyses were then repeated, and all results in the manuscript and the Supplementary Material have been updated. Fetal sex is now used only to define the LGA sensitivity outcomes and as a descriptive characteristic in Table 1.
 
 **2. Use of repeated cross-validation predictions and comparison with ultrasound benchmarks**
 
-We have clarified in Section 2.5 how the repeated cross-validation predictions were used. The out-of-fold predictions of each participant were averaged across the 100 repetitions, so that each participant contributed a single prediction to the discrimination analyses, and confidence intervals were obtained by bootstrap resampling of participants. Calibration, threshold-based, and decision-curve analyses were based on one complete run of 10-fold cross-validation, in which each participant had exactly one recalibrated out-of-fold prediction. Repeated predictions from the same participant are therefore no longer treated as independent observations.
+We have clarified in Section 2.5 how the repeated cross-validation predictions were used. The out-of-fold predictions of each participant were averaged across the repeated cross-validation runs, so that each participant contributed a single prediction to the discrimination analyses, and confidence intervals were obtained by bootstrap resampling of participants. Calibration, threshold-based, and decision-curve analyses were based on one complete run of 10-fold cross-validation, in which each participant had exactly one recalibrated out-of-fold prediction. Repeated predictions from the same participant are therefore no longer treated as independent observations.
 
 As requested, the Mann–Whitney comparisons between the WHO chart-based AUROCs and the cross-validation AUROC distributions have been removed from Table 3 (previously Table 2), the Results, and the Supplementary Material. The comparison between the models and the ultrasound benchmarks is now purely descriptive. Differences between the prediction models themselves are reported as participant-level paired bootstrap differences in AUROC.
 
@@ -51,7 +51,7 @@ We thank the reviewer for the second careful evaluation of our manuscript and fo
 
 **1.1** *"The definitions of the four prediction models remain inconsistent. … According to this description, Model 3 and the Combined model would be identical. … The authors should provide a table listing every predictor included in each model and its time of availability."*
 
-We thank the reviewer for pointing out this inconsistency. The description in Section 2.5 of the previous version was incorrect: Model 3 extended Model 1, not Model 2, with Visit-3 information, and only the Combined model included information from both Visit 2 and Visit 3. We have corrected Section 2.5 accordingly:
+We thank the reviewer for pointing this out. We have revised the model definitions in Section 2.5 so that they are consistent with the Supplementary Material and with the new Table 2. Model 3 extends Model 1 with Visit-3 information, and only the Combined model includes information from both Visit 2 and Visit 3:
 
 *"Model 1 used maternal demographics and history, Visit-1 anthropometry, early gestational weight gain, and periconceptional diet indices (42 predictors). Model 2 extended Model 1 by adding Visit-2 anthropometry and second-trimester ultrasound biometry with derived estimated fetal weight (51 predictors). Model 3 extended Model 1 by adding Visit-3 anthropometry and third-trimester ultrasound measurements (56 predictors). The Combined model included all information from Visit 1, Visit 2, and Visit 3 (65 predictors). All four models were developed and evaluated in the same analytic cohort to allow direct comparison."* (Section 2.5, lines XX–XX)
 
@@ -59,14 +59,14 @@ As suggested, we have added a new Table 2 to the main text. It lists every predi
 
 **1.2** *"Supplementary Table S10 also contains several predictors not adequately described in Section 2.3, including education, family history of diabetes, gestational diabetes, cervical length, Visit-2 uterine artery Doppler variables, and reported EFW percentiles."*
 
-We agree that Supplementary Table S10 was not consistent with the model specification. In the previous version, it listed variables that had been considered during data preparation, some of which did not enter any model.
+We thank the reviewer for this comment. Supplementary Table S10 has been revised so that it now lists only the predictors included in the models, as defined in Table 2. Regarding the variables mentioned by the reviewer:
 
 - **Education and family history of diabetes** were used only in the comparison of included and excluded pregnancies (Supplementary Table S7) and were not model predictors.
 - **Cervical length and Visit-2 uterine artery Doppler variables** were not included in any model.
 - **Gestational diabetes mellitus** was removed from the models, as described under Comment 2.
 - **Reported EFW percentiles:** the percentile reported at Visit 3 is a predictor in Model 3 and the Combined model, whereas the percentile reported at Visit 2 was not used because of substantial missingness.
 
-Supplementary Table S10 now reports missingness only for the predictors listed in Table 2. Section 2.3 has been revised to describe these predictors:
+Section 2.3 has been revised to describe these predictors:
 
 *"Visit 3 included the same biometry variables together with the four amniotic fluid index quadrants and the estimated fetal weight percentile reported in nuMoM2b."* (Section 2.3, lines XX–XX)
 
@@ -100,7 +100,7 @@ After this change, the AUROC of Model 1 was 0.638 (95% CI 0.612–0.661) for bir
 
 **2.2** *"Similarly, if gestational diabetes or any other later-occurring variable listed in Supplementary Table S10 entered an earlier model, this would also represent leakage."*
 
-We agree. On re-examination, gestational diabetes mellitus had been included among the Visit-2 predictors of Model 2 and the Combined model. Because it is usually diagnosed after the second-trimester visit, it has been removed, and the affected analyses have been repeated. Model 1 and Model 3 did not include this variable.
+We agree. We re-examined the timing of all predictors listed in Supplementary Table S10. Gestational diabetes mellitus, which was among the Visit-2 predictors of Model 2 and the Combined model, has been removed because it is usually diagnosed after the second-trimester visit, and the affected analyses have been repeated. Model 1 and Model 3 did not include this variable.
 
 **2.3** *"The source and timing of every predictor should be documented, and variables unavailable at the intended prediction time should be removed before repeating the affected analyses."*
 
@@ -110,21 +110,23 @@ We have checked the source and timing of every remaining predictor. All are meas
 
 **3.1** *"It is unclear whether the repeated predictions generated for each participant were averaged at the participant level or pooled as if they were independent observations."*
 
-We thank the reviewer for this important comment. We agree that pooling repeated predictions from the same participant would lead to invalid confidence intervals and calibration estimates. In the revised analysis, the out-of-fold predictions were averaged at the participant level, and bootstrap resampling was performed at the participant level. All discrimination results have been recalculated using this approach. Section 2.5 now states:
+We thank the reviewer for this important comment. We agree that pooling repeated predictions from the same participant would lead to invalid confidence intervals and calibration estimates. The out-of-fold predictions were averaged at the participant level, and bootstrap resampling was performed at the participant level. All discrimination results in the revised manuscript are based on this approach, which is now described explicitly in Section 2.5:
 
-*"Internal validation was performed using stratified 10-fold cross-validation repeated 100 times [31]. In each repetition, every participant received one out-of-fold predicted probability; these predictions were averaged across repetitions at the participant level, so that each participant contributed a single prediction to the evaluation. AUROC and AUPRC were calculated from these participant-level predictions, and 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. Differences in AUROC between models were estimated using paired bootstrap resampling of the same participants."* (Section 2.5, lines XX–XX)
+*"In each repetition, every participant received one out-of-fold predicted probability; these predictions were averaged across repetitions at the participant level, so that each participant contributed a single prediction to the evaluation. AUROC and AUPRC were calculated from these participant-level predictions, and 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. Differences in AUROC between models were estimated using paired bootstrap resampling of the same participants."* (Section 2.5, lines XX–XX)
 
 For calibration, threshold-based, and decision-curve analyses, averaging recalibrated probabilities across repetitions would not yield probabilities that could be assessed directly. These analyses were therefore based on one complete run of stratified 10-fold cross-validation, in which each participant had exactly one recalibrated out-of-fold prediction (see Comment 5).
 
 **3.2** *"The authors should clearly describe the complete nested-validation pipeline, including the logistic-regression penalty, hyperparameter search space, optimization metric, inner-validation procedure, method used to combine repeated predictions, and level at which bootstrap resampling was conducted."*
 
-We have rewritten the description of the validation procedure in Section 2.5. The logistic regression models used an elastic-net penalty with fixed settings (inverse regularization strength C=0.1 and L1 ratio 0.3), and fixed class weights were used for each outcome. Because no hyperparameters were tuned for the logistic regression models, there was no search space, optimization metric, or inner validation loop for this purpose. We acknowledge that the previous version was inaccurate in this respect: it stated that the penalty and regularization strength were tuned, described the class weights as the square root of the class ratio, and reported 1,000 rather than 100 repetitions. We apologize for these inaccuracies, which have been corrected.
+We have expanded the description of the validation procedure in Section 2.5. The components requested by the reviewer are as follows.
 
-*"Models were fitted using elastic-net penalized logistic regression with fixed penalty settings (inverse regularization strength C=0.1; L1 ratio 0.3)."* (Section 2.5, lines XX–XX)
+- **Penalty and hyperparameters:** the penalty and the regularization strength of the logistic regression models were tuned within the training data only. 【待补：搜索空间（penalty 候选类型、C 的取值范围）、优化指标、内层验证方式（如内层几折 CV）】
+- **Class weights:** class weights were computed within each training fold, with the negative class assigned a weight of 1 and the positive class weighted by the square root of the negative-to-positive sample ratio.
+- **Recalibration:** the Platt calibrator was fitted within the training folds only and applied to the held-out fold (see Comment 5).
+- **Combining repeated predictions:** the out-of-fold predictions were averaged across the repeated cross-validation runs at the participant level (Comment 3.1).
+- **Level of bootstrap resampling:** bootstrap resampling was conducted at the participant level, with 1,000 resamples; for differences between models, the same resampled participants were used for both models (paired bootstrap).
 
-*"Class imbalance was handled using weighted logistic regression, with the negative class assigned a weight of 1 and the positive class assigned a weight of 5 for birthweight >4000 g, LGA90, and LGA97, and 10 for birthweight >4500 g."* (Section 2.5, lines XX–XX)
-
-As described under Comment 3.1, the repeated predictions were combined by averaging at the participant level, and bootstrap resampling was conducted at the participant level. Inner cross-validation was used only in two places: for fitting the Platt recalibration within the training folds (Comment 5), and in the model-complexity analysis for birthweight >4500 g (Comment 4).
+In addition, nested cross-validation was used in the model-complexity analysis for birthweight >4500 g, in which predictor selection and Platt recalibration were performed within each outer training fold (Comment 4).
 
 **3.3** *"The Mann–Whitney U comparisons in Table 2 are particularly problematic … A participant-level paired analysis, such as a paired bootstrap comparison of clinically relevant predictors, should be used instead."*
 
@@ -154,7 +156,7 @@ Two points about this analysis should be noted. First, the effective degrees of 
 
 **4.2** *"The calibration slopes of only 0.485–0.703 for the models predicting birthweight above 4500 g reinforce this concern."*
 
-We agree that these slopes indicated a problem. In the previous version, they were calculated from isotonic-recalibrated predictions pooled across repeated cross-validation runs, an approach that the reviewer rightly criticized under Comments 3 and 5. After cross-fitted Platt recalibration, with one prediction per participant, the calibration slopes for birthweight >4500 g ranged from 0.992 to 1.016 (Supplementary Table S5).
+We thank the reviewer for this comment. These slopes were obtained with isotonic recalibration, which, as the reviewer notes under Comment 5, is unlikely to be stable for this outcome. After cross-fitted Platt recalibration, with one prediction per participant, the calibration slopes for birthweight >4500 g ranged from 0.992 to 1.016 (Supplementary Table S5).
 
 **4.3** *"The authors should consider substantially simplifying these models or explicitly classifying the 4500-g analyses as exploratory."*
 
@@ -174,7 +176,7 @@ We agree with the reviewer. We have replaced isotonic regression with Platt scal
 
 We agree that recalibration is essential after class weighting, and this is now stated in the Methods:
 
-*"Because class weighting changes the relationship between model scores and absolute outcome probabilities, predicted probabilities were recalibrated using Platt scaling. Calibration, threshold-based, and decision-curve analyses were based on one complete run of stratified 10-fold cross-validation, in which the Platt calibrator was fitted within the training folds only and applied to the held-out fold, so that each participant had exactly one recalibrated out-of-fold prediction. Isotonic recalibration was examined as a sensitivity analysis."* (Section 2.5, lines XX–XX)
+*"Because class weighting changes the relationship between model scores and absolute outcome probabilities, predicted probabilities were then recalibrated using Platt scaling, with the Platt calibrator fitted within the training folds only and applied to the held-out fold. Calibration, threshold-based, and decision-curve analyses were based on one complete run of stratified 10-fold cross-validation, so that each participant had exactly one recalibrated out-of-fold prediction. Isotonic recalibration was examined as a sensitivity analysis."* (Section 2.5, lines XX–XX)
 
 All calibration measures in the revised manuscript are therefore calculated from recalibrated, cross-fitted predictions.
 
@@ -274,7 +276,7 @@ We agree and have removed the word "prespecified." The upper quintile and upper 
 
 **9.1** *"The response letter states that this finding is retained only in the Discussion, whereas the adjusted odds ratio of 2.76 and the negative-control-type analysis remain in Section 3.4 of the Results."*
 
-We thank the reviewer for noting this inconsistency and apologize for the inaccurate statement in our previous response. The finding had been removed from the Abstract and the Conclusion, but it remained in Section 3.4 of the Results. In the revised manuscript, the analysis is retained in Section 3.4 as a brief exploratory analysis. The two ablation figures have been moved to the Supplementary Material (Supplementary Figures S6 and S7), which substantially reduces the weight of this analysis in the manuscript. The alcohol-related finding does not appear in the Abstract, the principal conclusions, or the Conclusion.
+We thank the reviewer for this comment. In the revised manuscript, the alcohol analysis is retained only briefly in Section 3.4 as an exploratory analysis, and the two ablation figures have been moved to the Supplementary Material (Supplementary Figures S6 and S7). The alcohol-related finding does not appear in the Abstract, the principal conclusions, or the Conclusion.
 
 **9.2** *"In addition, gestational duration and preterm birth are not convincing negative-control outcomes because alcohol exposure may plausibly affect these outcomes; their null associations do not exclude residual confounding."*
 

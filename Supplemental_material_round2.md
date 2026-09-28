@@ -102,7 +102,7 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Combined − Model 1 | 0.104 (0.081 to 0.129) | 0.100 (0.061 to 0.139) |
 | Model 3 − Model 2 | 0.082 (0.058 to 0.102) | 0.092 (0.058 to 0.134) |
 | Combined − Model 2 | 0.081 (0.059 to 0.101) | 0.094 (0.055 to 0.131) |
-| Combined − Model 3 | −0.001 (−0.003 to 0.003) | 0.002 (−0.001 to 0.004)【待重跑确认】 |
+| Combined − Model 3 | −0.001 (−0.003 to 0.003) | 0.002 (−0.001 to 0.004) |
 
 <span style="color:red">Table note: AUROC and AUPRC were calculated from out-of-fold predictions averaged for each participant across repeated stratified 10-fold cross-validation; 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. AUPRC was calculated as the area under the precision–recall curve using the trapezoidal rule 【待更新：按梯形积分重算 AUPRC 数值】. Differences in AUROC were estimated by paired bootstrap resampling, in which the same resampled participants were used for both models. Calibration measures were calculated from Platt-recalibrated out-of-fold predictions from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. The scaled Brier score is one minus the ratio of the Brier score to that of a null model assigning the observed prevalence to all participants (null Brier score 0.0730 for birthweight >4000 g and 0.0119 for birthweight >4500 g); it was calculated from unrounded values. The calibration intercept and slope were estimated by regressing the outcome on the logit of the predicted probability; calibration-in-the-large (CITL) is the intercept with the slope fixed at 1. AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve; CI: confidence interval; O/E: observed-to-expected ratio.</span>
 
@@ -340,4 +340,4 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | | max_features | None, sqrt, 0.50, 0.80 |
 | | Randomized-search draws | 12 |
 
-<span style="color:red">Table note: Hyperparameters were selected within each outer training fold using inner 3-fold cross-validation optimizing average precision; the validation fold was not used for tuning. 【待确认：logistic regression 的搜索方式（网格搜索还是随机搜索，若为随机搜索需注明抽样次数）】</span>
+<span style="color:red">Table note: For all classifiers, hyperparameters were selected within each outer training fold by randomized search with inner 3-fold cross-validation optimizing average precision; the validation fold was not used for tuning.</span>

@@ -220,7 +220,7 @@ We restricted this analysis to discrimination of the reduced predictor set. Cali
 
 The analysis is now described in the Methods (Section 2.6) and Results (Section 3.2). Items 16 and 20c of the TRIPOD+AI checklist (Supplementary Table S11) have been updated. They now describe the differences between the development data and the MMC data, and refer to Supplementary Table S12. The ethics and data-availability statements have been extended:
 
-*"The retrospective analysis of the MMC data was approved by the Medical Ethics Review Committee of Máxima Medical Center, which waived the requirement for informed consent [33]."* (Ethics Statement, lines XX–XX)
+*"The Medical Ethics Review Committee of Máxima Medical Center reviewed the retrospective use of the MMC data and waived the requirement for formal ethical approval [33]."* (Ethics Statement, lines XX–XX)
 
 *"The MMC data are not publicly available because of privacy regulations; further information is available from the corresponding author upon reasonable request."* (Data Availability Statement, lines XX–XX)
 

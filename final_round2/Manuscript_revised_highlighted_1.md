@@ -30,7 +30,7 @@ Groene Loper 19, 5612 AP Eindhoven, The Netherlands
 Email: x.long@tue.nl
 
 ## Word count (main)
-<span style="color:red">5640</span>
+<span style="color:red">5390</span>
 
 ## Number of tables and figures
 Tables: <span style="color:red">3</span>

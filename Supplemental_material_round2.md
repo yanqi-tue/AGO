@@ -23,7 +23,7 @@ All WHO-derived percentile variables were evaluated as ultrasound-based benchmar
 
 ## Figure S2. Calibration plots for macrosomia prediction.
 
-(a) >4000 g. (b) >4500 g. <span style="color:red">Calibration plots are based on Platt-recalibrated out-of-fold predicted probabilities from one complete run of stratified 10-fold cross-validation, in which the Platt calibrator was fitted within the training folds only; each participant contributes one prediction.</span> Models: <span style="color:red">Model 1 (Visit 1), Model 2 (Model 1 + Visit 2), Model 3 (Model 1 + Visit 3), and the Combined model (Visits 1–3).</span> Brier scores (a): M1 <span style="color:red">0.0721</span>, M2 <span style="color:red">0.0716</span>, M3 <span style="color:red">0.0686</span>, Combined <span style="color:red">0.0687</span>. Brier scores (b): M1 <span style="color:red">0.0119</span>, M2 <span style="color:red">0.0119</span>, M3 <span style="color:red">0.0116</span>, Combined <span style="color:red">0.0116</span>. <span style="color:red">【待确认：isotonic 敏感性分析的校准图放在哪里——作为本图的 (c)(d) 面板，还是单列为新的补充图（补充图总数相应改为 8）】</span>
+(a) >4000 g. (b) >4500 g. <span style="color:red">Calibration plots are based on Platt-recalibrated out-of-fold predicted probabilities from one complete run of stratified 10-fold cross-validation, in which the Platt calibrator was fitted within the training folds only; each participant contributes one prediction.</span> Models: <span style="color:red">Model 1 (Visit 1), Model 2 (Model 1 + Visit 2), Model 3 (Model 1 + Visit 3), and the Combined model (Visits 1–3).</span> Brier scores (a): M1 <span style="color:red">0.0721</span>, M2 <span style="color:red">0.0716</span>, M3 <span style="color:red">0.0686</span>, Combined <span style="color:red">0.0687</span>. Brier scores (b): M1 <span style="color:red">0.0119</span>, M2 <span style="color:red">0.0119</span>, M3 <span style="color:red">0.0116</span>, Combined <span style="color:red">0.0116</span>.
 
 ## Figure S3. Calibration plots for LGA sensitivity outcomes.
 
@@ -43,7 +43,7 @@ Decision curve analysis was performed using <span style="color:red">Platt-recali
 
 ## <span style="color:red">Supplementary Figure S7. Change in area under the receiver operating characteristic curve after sequential removal of individual periconceptional diet components from Model 1 for prediction of birthweight >4500 g.</span>
 
-<span style="color:red">(Previously Figure 6 of the main manuscript.)</span> Values are presented as mean and standard deviation across cross-validation runs, with standard deviation shown as error bars. <span style="color:red">This ablation analysis was exploratory. 【待补：图中 "p<0.05" 标记的处理——说明所用检验，或从图中删除该标记】</span>
+<span style="color:red">(Previously Figure 6 of the main manuscript.)</span> Values are presented as mean and standard deviation across cross-validation runs, with standard deviation shown as error bars. <span style="color:red">This ablation analysis was exploratory.</span><!-- 原图中的显著性标记已删除（需在图上同步删去） -->
 
 ---
 
@@ -84,13 +84,13 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 
 | Outcome | Model | Event rate | AUROC (95% CI) | AUPRC (95% CI) | Brier score | Scaled Brier score | Calibration intercept | Calibration slope | CITL | O/E |
 |---|---|---:|---|---|---:|---:|---:|---:|---:|---:|
-| Birthweight >4000 g | Model 1 | 7.9% | 0.638 (0.612–0.661) | 【待补】 | 0.0721 | 1.2% | 0.017 | 1.007 | −0.001 | 0.999 |
-| Birthweight >4000 g | Model 2 | 7.9% | 0.661 (0.635–0.684) | 【待补】 | 0.0716 | 2.1% | 0.039 | 1.017 | −0.001 | 0.999 |
-| Birthweight >4000 g | Model 3 | 7.9% | 0.743 (0.719–0.765) | 【待补】 | 0.0686 | 6.0% | −0.006 | 0.999 | −0.003 | 0.997 |
+| Birthweight >4000 g | Model 1 | 7.9% | 0.638 (0.612–0.661) | 0.120 (0.106–0.139) | 0.0721 | 1.2% | 0.017 | 1.007 | −0.001 | 0.999 |
+| Birthweight >4000 g | Model 2 | 7.9% | 0.661 (0.635–0.684) | 0.136 (0.119–0.159) | 0.0716 | 2.1% | 0.039 | 1.017 | −0.001 | 0.999 |
+| Birthweight >4000 g | Model 3 | 7.9% | 0.743 (0.719–0.765) | 0.200 (0.176–0.233) | 0.0686 | 6.0% | −0.006 | 0.999 | −0.003 | 0.997 |
 | Birthweight >4000 g | Combined model | 7.9% | 0.742 (0.717–0.764) | 0.209 (0.181–0.240) | 0.0687 | 6.0% | −0.002 | 1.001 | −0.003 | 0.997 |
-| Birthweight >4500 g | Model 1 | 1.2% | 0.731 (0.680–0.780) | 【待补】 | 0.0119 | 0.6% | −0.007 | 0.999 | −0.005 | 0.995 |
-| Birthweight >4500 g | Model 2 | 1.2% | 0.737 (0.685–0.786) | 【待补】 | 0.0119 | 0.7% | 0.059 | 1.016 | −0.005 | 0.995 |
-| Birthweight >4500 g | Model 3 | 1.2% | 0.829 (0.785–0.874) | 【待补】 | 0.0116 | 3.3% | −0.046 | 0.992 | −0.018 | 0.983 |
+| Birthweight >4500 g | Model 1 | 1.2% | 0.731 (0.680–0.780) | 0.026 (0.017–0.052) | 0.0119 | 0.6% | −0.007 | 0.999 | −0.005 | 0.995 |
+| Birthweight >4500 g | Model 2 | 1.2% | 0.737 (0.685–0.786) | 0.037 (0.018–0.068) | 0.0119 | 0.7% | 0.059 | 1.016 | −0.005 | 0.995 |
+| Birthweight >4500 g | Model 3 | 1.2% | 0.829 (0.785–0.874) | 0.073 (0.040–0.129) | 0.0116 | 3.3% | −0.046 | 0.992 | −0.018 | 0.983 |
 | Birthweight >4500 g | Combined model | 1.2% | 0.831 (0.788–0.876) | 0.066 (0.042–0.107) | 0.0116 | 2.9% | −0.030 | 0.997 | −0.017 | 0.984 |
 
 <span style="color:red">(b) Paired differences in AUROC between models</span>
@@ -104,7 +104,7 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Combined − Model 2 | 0.081 (0.059 to 0.101) | 0.094 (0.055 to 0.131) |
 | Combined − Model 3 | −0.001 (−0.003 to 0.003) | 0.002 (−0.001 to 0.004)【待重跑确认】 |
 
-<span style="color:red">Table note: AUROC and AUPRC were calculated from out-of-fold predictions averaged for each participant across repeated stratified 10-fold cross-validation; 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. Differences in AUROC were estimated by paired bootstrap resampling, in which the same resampled participants were used for both models. Calibration measures were calculated from Platt-recalibrated out-of-fold predictions from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. The scaled Brier score is one minus the ratio of the Brier score to that of a null model assigning the observed prevalence to all participants (null Brier score 0.0730 for birthweight >4000 g and 0.0119 for birthweight >4500 g); it was calculated from unrounded values. The calibration intercept and slope were estimated by regressing the outcome on the logit of the predicted probability; calibration-in-the-large (CITL) is the intercept with the slope fixed at 1. Results with isotonic recalibration are provided as a sensitivity analysis 【待确认位置】. AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve; CI: confidence interval; O/E: observed-to-expected ratio.</span>
+<span style="color:red">Table note: AUROC and AUPRC were calculated from out-of-fold predictions averaged for each participant across repeated stratified 10-fold cross-validation; 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. Differences in AUROC were estimated by paired bootstrap resampling, in which the same resampled participants were used for both models. Calibration measures were calculated from Platt-recalibrated out-of-fold predictions from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. The scaled Brier score is one minus the ratio of the Brier score to that of a null model assigning the observed prevalence to all participants (null Brier score 0.0730 for birthweight >4000 g and 0.0119 for birthweight >4500 g); it was calculated from unrounded values. The calibration intercept and slope were estimated by regressing the outcome on the logit of the predicted probability; calibration-in-the-large (CITL) is the intercept with the slope fixed at 1. AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve; CI: confidence interval; O/E: observed-to-expected ratio.</span>
 
 ## <span style="color:red">Supplementary Table S6. Additional sensitivity analysis of the alcohol-related variable with gestational duration outcomes.</span>
 
@@ -162,9 +162,44 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 
 <span style="color:red">Table note: Threshold-based operating characteristics were calculated from Platt-recalibrated out-of-fold predicted probabilities from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. Predictions from all folds were ranked together, and the 1,275 pregnancies (upper quintile) and 638 pregnancies (upper decile) with the highest predicted risk were classified as screen-positive. The predicted-risk cutoff is the lowest recalibrated predicted probability among screen-positive pregnancies. These fixed risk strata describe screening yield and do not represent recommended clinical intervention thresholds. TP: true positive; FN: false negative; FP: false positive; TN: true negative; PPV: positive predictive value; NPV: negative predictive value.</span>
 
-## Supplementary Table S9. Sensitivity comparison of logistic regression and non-linear classifiers for primary macrosomia outcomes.
+## <span style="color:red">Supplementary Table S9. Sensitivity comparison of logistic regression and non-linear classifiers for primary macrosomia outcomes (Revised).</span>
 
-<span style="color:red">【待补：S9 重算结果。表格结构沿用原稿；logistic regression 各行需与 Table S5 的 AUROC/AUPRC 一致；表注中的 "square root of the negative-to-positive sample ratio" 保留；"2,000 bootstrap resamples of out-of-fold predictions" 需改为与主分析一致的受试者层面表述（待作者确认做法）】</span>
+| Outcome | Model | Classifier | AUROC (95% CI) | AUPRC (95% CI) |
+|---|---|---|---|---|
+| Birthweight >4000 g | Model 1 | Logistic regression | 0.638 (0.612–0.661) | 0.120 (0.106–0.139) |
+| Birthweight >4000 g | Model 1 | Random forest | 0.634 (0.608–0.660) | 0.118 (0.105–0.136) |
+| Birthweight >4000 g | Model 1 | XGBoost | 0.626 (0.602–0.652) | 0.118 (0.105–0.136) |
+| Birthweight >4000 g | Model 1 | Gradient boosting | 0.615 (0.590–0.640) | 0.115 (0.102–0.132) |
+| Birthweight >4000 g | Model 2 | Logistic regression | 0.661 (0.635–0.684) | 0.136 (0.119–0.159) |
+| Birthweight >4000 g | Model 2 | Random forest | 0.650 (0.626–0.676) | 0.131 (0.114–0.153) |
+| Birthweight >4000 g | Model 2 | XGBoost | 0.634 (0.609–0.661) | 0.131 (0.115–0.155) |
+| Birthweight >4000 g | Model 2 | Gradient boosting | 0.640 (0.616–0.667) | 0.133 (0.116–0.155) |
+| Birthweight >4000 g | Model 3 | Logistic regression | 0.743 (0.719–0.765) | 0.200 (0.176–0.233) |
+| Birthweight >4000 g | Model 3 | Random forest | 0.731 (0.709–0.755) | 0.207 (0.181–0.242) |
+| Birthweight >4000 g | Model 3 | XGBoost | 0.734 (0.712–0.758) | 0.201 (0.177–0.235) |
+| Birthweight >4000 g | Model 3 | Gradient boosting | 0.736 (0.714–0.760) | 0.208 (0.182–0.243) |
+| Birthweight >4000 g | Combined model | Logistic regression | 0.742 (0.717–0.764) | 0.209 (0.181–0.240) |
+| Birthweight >4000 g | Combined model | Random forest | 0.735 (0.712–0.759) | 0.208 (0.181–0.243) |
+| Birthweight >4000 g | Combined model | XGBoost | 0.730 (0.708–0.754) | 0.196 (0.172–0.227) |
+| Birthweight >4000 g | Combined model | Gradient boosting | 0.738 (0.717–0.761) | 0.201 (0.177–0.233) |
+| Birthweight >4500 g | Model 1 | Logistic regression | 0.731 (0.680–0.780) | 0.026 (0.017–0.052) |
+| Birthweight >4500 g | Model 1 | Random forest | 0.693 (0.632–0.754) | 0.023 (0.017–0.032) |
+| Birthweight >4500 g | Model 1 | XGBoost | 0.667 (0.599–0.733) | 0.020 (0.014–0.027) |
+| Birthweight >4500 g | Model 1 | Gradient boosting | 0.681 (0.618–0.738) | 0.021 (0.016–0.029) |
+| Birthweight >4500 g | Model 2 | Logistic regression | 0.737 (0.685–0.786) | 0.037 (0.018–0.068) |
+| Birthweight >4500 g | Model 2 | Random forest | 0.704 (0.638–0.769) | 0.025 (0.020–0.031) |
+| Birthweight >4500 g | Model 2 | XGBoost | 0.673 (0.609–0.733) | 0.023 (0.018–0.031) |
+| Birthweight >4500 g | Model 2 | Gradient boosting | 0.711 (0.647–0.768) | 0.025 (0.020–0.033) |
+| Birthweight >4500 g | Model 3 | Logistic regression | 0.829 (0.785–0.874) | 0.073 (0.040–0.129) |
+| Birthweight >4500 g | Model 3 | Random forest | 0.804 (0.757–0.852) | 0.066 (0.042–0.116) |
+| Birthweight >4500 g | Model 3 | XGBoost | 0.782 (0.728–0.836) | 0.066 (0.041–0.117) |
+| Birthweight >4500 g | Model 3 | Gradient boosting | 0.798 (0.743–0.849) | 0.065 (0.042–0.108) |
+| Birthweight >4500 g | Combined model | Logistic regression | 0.831 (0.788–0.876) | 0.066 (0.042–0.107) |
+| Birthweight >4500 g | Combined model | Random forest | 0.820 (0.774–0.866) | 0.058 (0.038–0.096) |
+| Birthweight >4500 g | Combined model | XGBoost | 0.778 (0.724–0.831) | 0.061 (0.039–0.108) |
+| Birthweight >4500 g | Combined model | Gradient boosting | 0.788 (0.735–0.838) | 0.063 (0.039–0.114) |
+
+<span style="color:red">Table note. Logistic-regression rows correspond to the primary models (Table S5). The non-linear classifiers used the same predictor sets as the logistic regression models (42, 51, 56, and 65 predictors) and were evaluated in one run of stratified 10-fold cross-validation, so that each participant had one out-of-fold prediction. Within each outer training fold, hyperparameters were selected by randomized search with inner 3-fold cross-validation optimizing average precision (12 iterations for random forest and gradient boosting and 18 for XGBoost). 95% confidence intervals were obtained from 2,000 bootstrap resamples of participants. AUPRC was calculated as average precision. 【待确认：非线性模型的类别权重做法（run_config 中记录的是 1:5 和 1:10），需与正文 2.5 节的表述一致】 AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve.</span>
 
 ## <span style="color:red">Supplementary Table S10. Missingness of the predictors included in the prediction models before k-nearest-neighbor imputation (Revised).</span>
 
@@ -174,10 +209,10 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Race and ethnicity (four indicators) | Visit 1 | 0.0 |
 | Income level | Visit 1 | 16.3 |
 | Smoking in the 3 months before pregnancy | Visit 1 | 0.0 |
-| Pre-pregnancy BMI | Visit 1 | 【待核对：原表 "weight before pregnancy" 为 2.0，"BMI" 为 1.3，需确认对应关系】 |
+| Pre-pregnancy BMI | Visit 1 | 1.3 |
 | Preexisting diabetes mellitus | Visit 1 | 0.0 |
 | Healthy Eating Index-2010 and Alternative Healthy Eating Index-2010 component and total scores (25 predictors) | Visit 1 | 0.0 |
-| BMI at Visit 1 | Visit 1 | 【待核对】 |
+| BMI at Visit 1 | Visit 1 | 2.0 |
 | Gestational weight gain at Visit 1 | Visit 1 | 1.6 |
 | Waist circumference at Visit 1 | Visit 1 | 2.0 |
 | Waist over iliac crest at Visit 1 | Visit 1 | 2.0 |
@@ -236,7 +271,7 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | 12c | Model type, rationale, model-building steps, hyperparameter tuning, and internal validation are described. | Yes | Section 2.5; Supplementary Table S9 | Logistic regression was selected as the primary modeling approach. Regularization, class weighting, hyperparameter tuning, <span style="color:red">Platt recalibration</span>, and internal validation are described in Section 2.5. Non-linear classifier sensitivity comparisons are reported in Supplementary Table S9. |
 | 12e | Performance measures and plots are specified. | Yes | Section 2.5; Section 3.2; Figure 1; Supplementary Figures S1–S3 <span style="color:red">and S5</span>; Supplementary Tables S4, S5, S8, <span style="color:red">S9, and S14</span> | AUROC, AUPRC, <span style="color:red">paired differences in AUROC,</span> Brier score, <span style="color:red">scaled Brier score,</span> calibration intercept, calibration slope, <span style="color:red">calibration-in-the-large, O/E ratio,</span> reliability plots, threshold-based operating characteristics, <span style="color:red">decision curves,</span> and non-linear model sensitivity comparisons are reported. |
 | 12g | Calculation of model predictions for evaluation is described. | Yes | Section 2.5 | <span style="color:red">Out-of-fold predicted probabilities were averaged at the participant level for discrimination analyses. Calibration, threshold-based, and decision-curve analyses used Platt-recalibrated out-of-fold predictions from one complete run of 10-fold cross-validation, with one prediction per participant.</span> |
-| 13 | Class imbalance handling and recalibration are described. | Yes | Section 2.5; Supplementary Tables S4–S5; Supplementary Figures S2–S3 | Class-weighted logistic regression was used, followed by <span style="color:red">Platt recalibration fitted within the training folds; isotonic recalibration was examined as a sensitivity analysis</span>. Calibration summaries are reported for primary outcomes and LGA sensitivity outcomes. |
+| 13 | Class imbalance handling and recalibration are described. | Yes | Section 2.5; Supplementary Tables S4–S5; Supplementary Figures S2–S3 | Class-weighted logistic regression was used, followed by <span style="color:red">Platt recalibration fitted within the training folds</span>. Calibration summaries are reported for primary outcomes and LGA sensitivity outcomes. |
 | 15 | Model output and thresholds are described. | Yes | Section 2.5; Section 3.2; Supplementary Table S8 | Model output was <span style="color:red">recalibrated</span> predicted probability. Upper-quintile and upper-decile risk strata were evaluated as <span style="color:red">fixed risk strata</span> in Supplementary Table S8<span style="color:red">; they do not represent recommended intervention thresholds</span>. |
 | 16 | Differences between development and evaluation data are identified. | <span style="color:red">Yes</span> | <span style="color:red">Sections 2.6, 3.2, and 4.4; Supplementary Table S13</span> | <span style="color:red">Performance of the full models was assessed by internal validation only. A reduced early-pregnancy model with six harmonizable predictors was evaluated in an independent Dutch cohort (MMC). Differences between the cohorts are described: the MMC data included multiparous women and repeated deliveries, and predictor availability was limited to six predictors.</span> |
 | 20c | Distribution of predictors and outcomes is compared between development and evaluation data if applicable. | <span style="color:red">Partly</span> | <span style="color:red">Section 3.2; Supplementary Table S13</span> | <span style="color:red">Outcome prevalence is reported for both cohorts. The MMC cohort has been described previously [33].</span> |
@@ -256,7 +291,7 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | Birthweight >4500 g | Reduced early-pregnancy model, internal validation in nuMoM2b | Six harmonizable predictors | 6,371 (77, 1.2%) | 0.615 (0.556–0.678) |
 | Birthweight >4500 g | Reduced early-pregnancy model applied to MMC | Six harmonizable predictors | 12,043 (134, 1.1%) | 0.636 (0.589–0.681) |
 
-<span style="color:red">Table note: The MMC cohort comprises retrospective electronic medical record data of pregnant women aged 18–45 years without preexisting diabetes who gave birth at Máxima Medical Center, Veldhoven, the Netherlands, between 2012 and 2017, and has been described previously [33]. The six harmonizable predictors were maternal age, pre-pregnancy BMI, and four race and ethnicity indicators (non-Hispanic White, non-Hispanic Black, Hispanic, and Asian or other). The reduced model was developed in nuMoM2b using the same modeling framework as the main models and was applied to the MMC data with the nuMoM2b coefficients and intercept unchanged, without refitting or recalibration. MMC records with missing predictor or outcome data were excluded. The MMC data included both nulliparous and multiparous women, and some women contributed more than one delivery record. Because the models were trained with class weights, the unchanged intercept does not correspond to absolute risk; therefore, only discrimination was assessed. 95% confidence intervals were obtained by bootstrap resampling 【待确认：MMC 按分娩记录还是按孕妇重抽样】. Periconceptional diet, most Visit-1 anthropometric measurements, and serial ultrasound measurements were not available in a comparable form in the MMC cohort. This analysis is a limited evaluation of a reduced predictor set and does not constitute external validation of the full visit-updated models. The retrospective analysis of the MMC data was approved by the Medical Ethics Review Committee of Máxima Medical Center, which waived the requirement for informed consent. AUROC: area under the receiver operating characteristic curve; BMI: body mass index; CI: confidence interval; MMC: Máxima Medical Center.</span>
+<span style="color:red">Table note: The MMC cohort comprises retrospective electronic medical record data of pregnant women aged 18–45 years without preexisting diabetes who gave birth at Máxima Medical Center, Veldhoven, the Netherlands, between 2012 and 2017, and has been described previously [33]. The six harmonizable predictors were maternal age, pre-pregnancy BMI, and four race and ethnicity indicators (non-Hispanic White, non-Hispanic Black, Hispanic, and Asian or other). The reduced model was developed in nuMoM2b using the same modeling framework as the main models and was applied to the MMC data with the nuMoM2b coefficients and intercept unchanged, without refitting or recalibration. MMC records with missing predictor or outcome data were excluded. The MMC data included both nulliparous and multiparous women, and some women contributed more than one delivery record. Because the models were trained with class weights, the unchanged intercept does not correspond to absolute risk; therefore, only discrimination was assessed. 95% confidence intervals were obtained by bootstrap resampling at the level of women, with all delivery records of a woman resampled together. Periconceptional diet, most Visit-1 anthropometric measurements, and serial ultrasound measurements were not available in a comparable form in the MMC cohort. This analysis is a limited evaluation of a reduced predictor set and does not constitute external validation of the full visit-updated models. The retrospective analysis of the MMC data was approved by the Medical Ethics Review Committee of Máxima Medical Center, which waived the requirement for informed consent. AUROC: area under the receiver operating characteristic curve; BMI: body mass index; CI: confidence interval; MMC: Máxima Medical Center.</span>
 
 ## <span style="color:red">Supplementary Table S14. Model complexity of the Combined model for birthweight >4500 g (New).</span>
 
@@ -266,4 +301,4 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | Top 20% of predictors | 13 | 3.7 | 0.813 (0.764–0.859) | −0.015 (−0.044 to 0.011) | 1.056 | −0.011 | 0.990 |
 | Top 14% of predictors | 10 | 3.0 | 0.803 (0.752–0.851) | −0.025 (−0.057 to 0.007) | 1.010 | −0.016 | 0.985 |
 
-<span style="color:red">Table note: The analysis used 30 repetitions of stratified 10-fold cross-validation (6,371 pregnancies; 77 events). Within each outer training fold, predictors were ranked by their absolute standardized mean difference (Cohen's d), and the top 20% (13 predictors) or 14% (10 predictors) were retained; the validation fold was not used for ranking, and different folds could select different predictors. Within each outer training set, an inner 5-fold cross-validation was used to obtain out-of-fold scores, to which the Platt calibrator was fitted before application to the outer validation fold. The local approximate effective degrees of freedom were calculated for the penalized model with the given set of active predictors and exclude the intercept; they do not account for the degrees of freedom used by predictor selection. Because predictors were selected within each training fold, the AUROCs of the reduced models include the optimism of selection. Confidence intervals were obtained by bootstrap resampling 【待确认：30 次重复的预测是按受试者取平均后重抽样，还是合并后重抽样】; differences in AUROC were estimated by paired bootstrap resampling. The full model in this table was evaluated within the same framework and therefore differs slightly from the Combined model in Table S5. AUROC: area under the receiver operating characteristic curve; CITL: calibration-in-the-large; O/E: observed-to-expected ratio.</span>
+<span style="color:red">Table note: The analysis used 100 repetitions of stratified 10-fold cross-validation (6,371 pregnancies; 77 events). Within each outer training fold, predictors were ranked by their absolute standardized mean difference (Cohen's d), and the top 20% (13 predictors) or 14% (10 predictors) were retained; the validation fold was not used for ranking, and different folds could select different predictors. Within each outer training set, an inner 5-fold cross-validation was used to obtain out-of-fold scores, to which the Platt calibrator was fitted before application to the outer validation fold. The local approximate effective degrees of freedom were calculated for the penalized model with the given set of active predictors and exclude the intercept; they do not account for the degrees of freedom used by predictor selection. Because predictors were selected within each training fold, the AUROCs of the reduced models include the optimism of selection. Out-of-fold predictions were averaged for each participant across the repetitions, and confidence intervals were obtained by bootstrap resampling of participants; differences in AUROC were estimated by paired bootstrap resampling. The full model in this table was evaluated within the same framework and therefore differs slightly from the Combined model in Table S5. AUROC: area under the receiver operating characteristic curve; CITL: calibration-in-the-large; O/E: observed-to-expected ratio.</span>

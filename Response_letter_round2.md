@@ -170,13 +170,13 @@ At the same time, we agree that estimates based on 77 events are imprecise. In l
 
 **5.1** *"Isotonic regression was fitted using 10% of each outer training fold, which would contain approximately seven events above 4500 g per calibration subset. This is unlikely to be sufficient for stable non-parametric calibration."*
 
-We agree with the reviewer. We have replaced isotonic regression with Platt scaling, a two-parameter logistic recalibration that is more appropriate for the available number of events. Isotonic recalibration is retained only as a sensitivity analysis in the Supplementary Material.
+We agree with the reviewer. We have replaced isotonic regression with Platt scaling, a two-parameter logistic recalibration that is more appropriate for the available number of events. All calibration, threshold-based, and decision-curve results in the revised manuscript are based on Platt recalibration.
 
 **5.2** *"Furthermore, class-weighted logistic regression changes the relationship between model scores and absolute outcome probabilities, making appropriate recalibration essential. … The authors should clarify whether these measures were calculated from raw or recalibrated predictions."*
 
 We agree that recalibration is essential after class weighting, and this is now stated in the Methods:
 
-*"Because class weighting changes the relationship between model scores and absolute outcome probabilities, predicted probabilities were then recalibrated using Platt scaling, with the Platt calibrator fitted within the training folds only and applied to the held-out fold. Calibration, threshold-based, and decision-curve analyses were based on one complete run of stratified 10-fold cross-validation, so that each participant had exactly one recalibrated out-of-fold prediction. Isotonic recalibration was examined as a sensitivity analysis."* (Section 2.5, lines XX–XX)
+*"Because class weighting changes the relationship between model scores and absolute outcome probabilities, predicted probabilities were then recalibrated using Platt scaling, with the Platt calibrator fitted within the training folds only and applied to the held-out fold. Calibration, threshold-based, and decision-curve analyses were based on one complete run of stratified 10-fold cross-validation, so that each participant had exactly one recalibrated out-of-fold prediction."* (Section 2.5, lines XX–XX)
 
 All calibration measures in the revised manuscript are therefore calculated from recalibrated, cross-fitted predictions.
 
@@ -290,7 +290,7 @@ We agree that the data-driven origin of this finding must be made clear. The Dis
 
 *"Although the Alternative Healthy Eating Index alcoholic drinks component emerged in the exploratory ablation analysis, which involved many dietary components, and moderate periconceptional alcohol intake was associated with birthweight >4500 g in adjusted models, this analysis was not designed to test a prespecified causal hypothesis."* (Section 4.2, lines XX–XX)
 
-The Discussion and the limitations continue to state that the finding is post hoc, based on a small number of cases, and hypothesis-generating only. 【待补：原 Figure 6（现 Supplementary Figure S7）中 "p<0.05" 标记的处理方式——说明所用检验，或从图中删除该标记】
+The Discussion and the limitations continue to state that the finding is post hoc, based on a small number of cases, and hypothesis-generating only. The significance marker has been removed from the figure (now Supplementary Figure S7).
 
 **9.4** *"If retained, the authors should report exposure-group and event counts, the exact definition of moderate alcohol exposure, the complete adjustment model, missing-data handling, multiplicity control, and a valid uncertainty analysis."*
 

@@ -120,7 +120,8 @@ For calibration, threshold-based, and decision-curve analyses, averaging recalib
 
 We have expanded the description of the validation procedure in Section 2.5. The components requested by the reviewer are as follows.
 
-- **Penalty and hyperparameters:** the hyperparameters of the logistic regression models, namely the regularization strength (C), the elastic-net L1 ratio, and the class weights, were tuned within the training data of each outer fold. Tuning used inner 3-fold cross-validation with average precision as the optimization metric. The full search spaces are now provided in the new Supplementary Table S15.
+- **Penalty and hyperparameters:** the logistic regression models used an elastic-net penalty. The regularization strength (C) and the L1 ratio were tuned within the training data of each outer fold by randomized search with inner 3-fold cross-validation, using average precision as the optimization metric. The search spaces are now provided in the note to Supplementary Table S9.
+- **Class weights:** class weights were computed within each training fold, with the negative class assigned a weight of 1 and the positive class weighted by the square root of the negative-to-positive sample ratio.
 - **Recalibration:** the Platt calibrator was fitted within the training folds only and applied to the held-out fold (see Comment 5).
 - **Combining repeated predictions:** the out-of-fold predictions were averaged across the repeated cross-validation runs at the participant level (Comment 3.1).
 - **Level of bootstrap resampling:** bootstrap resampling was conducted at the participant level, with 1,000 resamples; for differences between models, the same resampled participants were used for both models (paired bootstrap).

@@ -266,3 +266,13 @@
 - **TRIPOD+AI**：更新条目 9b、10、12a、12c、13、15、16、20c、23a。
 - **S10**：只列模型变量，与模型定义表完全一致。
 - **Supplementary Methods 第 1 段**：删除 Mann–Whitney 的描述。
+
+---
+
+## 五、2026-09-28 新增决定
+
+- AUPRC 统一为梯形积分。S5、S9 和正文中的 AUPRC 数值（0.209、0.066 等，目前为 average precision）需按梯形积分重算后替换。
+- Figure S1 图例：>4500 g 的 M2 改为 0.04，M3 改为 0.07（SVG 已改）。
+- 超参搜索空间见新增的 Supplementary Table S15。LR 的 C、l1_ratio、类别权重（1:2/1:3/1:5/1:7/1:10/sqrt）在训练数据内调参；内层 3 折 CV，优化 average precision。
+- 酒精分析整体降调为探索性分析；AHEI-2010 酒精评分的定义写入 S6 表注，正文不加细节。
+- isotonic 敏感性分析已删除；S14 改为 100 次重复。

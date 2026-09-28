@@ -19,7 +19,7 @@ All WHO-derived percentile variables were evaluated as ultrasound-based benchmar
 
 ## Figure S1. Precision–recall (PR) curves for macrosomia prediction.
 
-(a) >4000 g (prevalence 8%). (b) >4500 g (prevalence 1%). <span style="color:red">Curves were computed from participant-level out-of-fold predictions, averaged for each participant across the repeated runs of stratified 10-fold cross-validation.</span> Models: <span style="color:red">Model 1 (Visit 1), Model 2 (Model 1 + Visit 2), Model 3 (Model 1 + Visit 3), and the Combined model (Visits 1–3); the predictors in each model are listed in Table 2 of the main manuscript.</span> AUPRC (area under the precision–recall curve) values by model: >4000 g—M1 <span style="color:red">0.12</span>, M2 0.14, M3 0.20, Combined 0.21; >4500 g—M1 0.03, M2 0.03, M3 <span style="color:red">0.08</span>, Combined 0.07.
+(a) >4000 g (prevalence 8%). (b) >4500 g (prevalence 1%). <span style="color:red">Curves were computed from participant-level out-of-fold predictions, averaged for each participant across the repeated runs of stratified 10-fold cross-validation.</span> Models: <span style="color:red">Model 1 (Visit 1), Model 2 (Model 1 + Visit 2), Model 3 (Model 1 + Visit 3), and the Combined model (Visits 1–3); the predictors in each model are listed in Table 2 of the main manuscript.</span> AUPRC (area under the precision–recall curve) values by model: >4000 g—M1 <span style="color:red">0.12</span>, M2 0.14, M3 0.20, Combined 0.21; >4500 g—M1 0.03, M2 <span style="color:red">0.04</span>, M3 <span style="color:red">0.07</span>, Combined 0.07.
 
 ## Figure S2. Calibration plots for macrosomia prediction.
 
@@ -104,7 +104,7 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Combined − Model 2 | 0.081 (0.059 to 0.101) | 0.094 (0.055 to 0.131) |
 | Combined − Model 3 | −0.001 (−0.003 to 0.003) | 0.002 (−0.001 to 0.004)【待重跑确认】 |
 
-<span style="color:red">Table note: AUROC and AUPRC were calculated from out-of-fold predictions averaged for each participant across repeated stratified 10-fold cross-validation; 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. Differences in AUROC were estimated by paired bootstrap resampling, in which the same resampled participants were used for both models. Calibration measures were calculated from Platt-recalibrated out-of-fold predictions from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. The scaled Brier score is one minus the ratio of the Brier score to that of a null model assigning the observed prevalence to all participants (null Brier score 0.0730 for birthweight >4000 g and 0.0119 for birthweight >4500 g); it was calculated from unrounded values. The calibration intercept and slope were estimated by regressing the outcome on the logit of the predicted probability; calibration-in-the-large (CITL) is the intercept with the slope fixed at 1. AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve; CI: confidence interval; O/E: observed-to-expected ratio.</span>
+<span style="color:red">Table note: AUROC and AUPRC were calculated from out-of-fold predictions averaged for each participant across repeated stratified 10-fold cross-validation; 95% confidence intervals were obtained from 1,000 bootstrap resamples of participants. AUPRC was calculated as the area under the precision–recall curve using the trapezoidal rule 【待更新：按梯形积分重算 AUPRC 数值】. Differences in AUROC were estimated by paired bootstrap resampling, in which the same resampled participants were used for both models. Calibration measures were calculated from Platt-recalibrated out-of-fold predictions from one complete run of stratified 10-fold cross-validation, in which each participant had one prediction. The scaled Brier score is one minus the ratio of the Brier score to that of a null model assigning the observed prevalence to all participants (null Brier score 0.0730 for birthweight >4000 g and 0.0119 for birthweight >4500 g); it was calculated from unrounded values. The calibration intercept and slope were estimated by regressing the outcome on the logit of the predicted probability; calibration-in-the-large (CITL) is the intercept with the slope fixed at 1. AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve; CI: confidence interval; O/E: observed-to-expected ratio.</span>
 
 ## <span style="color:red">Supplementary Table S6. Additional sensitivity analysis of the alcohol-related variable with gestational duration outcomes.</span>
 
@@ -115,7 +115,7 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Delivery <39 weeks | Adjusted logistic regression | OR = 0.90 | 0.76 to 1.07 |
 | Delivery ≥41 weeks | Adjusted logistic regression | OR = 1.27 | 0.81 to 1.94 |
 
-<span style="color:red">Table note: Models were adjusted for maternal age, BMI, income, race and ethnicity, smoking, gravidity, and preexisting diabetes, as in the main alcohol analysis. Because alcohol exposure may itself influence gestational duration, these outcomes are not strict negative controls, and the absence of an association does not exclude residual confounding. This analysis is exploratory. CI: confidence interval; OR: odds ratio.</span>
+<span style="color:red">Table note: The alcohol-related variable was the alcoholic drinks component of the Alternative Healthy Eating Index-2010 [24]. For women, this component assigns 2.5 points to non-drinkers (0 drinks/day), 5 points to 0.1–<0.5 drinks/day, 10 points to 0.5–1.5 drinks/day, 5 points to >1.5–<2.0 drinks/day, 2.5 points to 2.0–<2.5 drinks/day, and 0 points to ≥2.5 drinks/day; the score is therefore not monotonic in alcohol intake, with the highest score assigned to moderate intake. Models were adjusted for maternal age, BMI, income, race and ethnicity, smoking, gravidity, and preexisting diabetes, as in the main alcohol analysis. Because alcohol exposure may itself influence gestational duration, these outcomes are not strict negative controls, and the absence of an association does not exclude residual confounding. This analysis is exploratory. CI: confidence interval; OR: odds ratio.</span>
 
 <!-- 原表的 "Interpretation" 一列已删去；表题中的 "Negative-control-type" 改为 "Additional"。 -->
 
@@ -199,7 +199,7 @@ Note: Estimated fetal weight was calculated using the Hadlock formula, and WHO g
 | Birthweight >4500 g | Combined model | XGBoost | 0.778 (0.724–0.831) | 0.061 (0.039–0.108) |
 | Birthweight >4500 g | Combined model | Gradient boosting | 0.788 (0.735–0.838) | 0.063 (0.039–0.114) |
 
-<span style="color:red">Table note. Logistic-regression rows correspond to the primary models (Table S5). The non-linear classifiers used the same predictor sets as the logistic regression models (42, 51, 56, and 65 predictors) and were evaluated in one run of stratified 10-fold cross-validation, so that each participant had one out-of-fold prediction. Within each outer training fold, hyperparameters were selected by randomized search with inner 3-fold cross-validation optimizing average precision (12 iterations for random forest and gradient boosting and 18 for XGBoost). 95% confidence intervals were obtained from 2,000 bootstrap resamples of participants. AUPRC was calculated as average precision. 【待确认：非线性模型的类别权重做法（run_config 中记录的是 1:5 和 1:10），需与正文 2.5 节的表述一致】 AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve.</span>
+<span style="color:red">Table note. Logistic-regression rows correspond to the primary models (Table S5). The non-linear classifiers used the same predictor sets as the logistic regression models (42, 51, 56, and 65 predictors) and were evaluated in one run of stratified 10-fold cross-validation, so that each participant had one out-of-fold prediction. Within each outer training fold, hyperparameters were selected by randomized search with inner 3-fold cross-validation optimizing average precision (12 iterations for random forest and gradient boosting and 18 for XGBoost). 95% confidence intervals were obtained from 2,000 bootstrap resamples of participants. Hyperparameter search spaces are provided in Supplementary Table S15. AUPRC was calculated as the area under the precision–recall curve using the trapezoidal rule. 【待更新：按梯形积分重算后的 AUPRC 数值（当前表中 AUPRC 为 average precision）】 AUROC: area under the receiver operating characteristic curve; AUPRC: area under the precision–recall curve.</span>
 
 ## <span style="color:red">Supplementary Table S10. Missingness of the predictors included in the prediction models before k-nearest-neighbor imputation (Revised).</span>
 
@@ -268,7 +268,7 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | 9b | Predictors are clearly defined, including how and when they were measured. | Yes | Section 2.3; <span style="color:red">Table 2</span>; Supplementary Methods; Supplementary Table S3 | <span style="color:red">All predictors in each model are listed in Table 2 together with their time of availability. Maternal characteristics, anthropometry, diet indices, and ultrasound predictors are described in Section 2.3. Fetal sex and gestational diabetes mellitus were not used as predictors. WHO fetal growth chart–based percentile variables are defined in Supplementary Table S3.</span> |
 | 10 | Sample size is explained and justified in the prediction-model context. | <span style="color:red">Partly</span> | Section <span style="color:red">2.6</span>; Section 3.1; <span style="color:red">Supplementary Table S14</span> | <span style="color:red">The sample size was determined by the available nuMoM2b data. The number of candidate predictors and events per candidate predictor are reported for each model and outcome. Because of the limited number of events for birthweight >4500 g, model complexity was additionally assessed (Supplementary Table S14). No a priori sample-size calculation was performed.</span> |
 | 12a | Data use for model development and internal validation is described. | Yes | Section 2.5 | Repeated stratified 10-fold cross-validation with 1000 repetitions was used for internal validation. <span style="color:red">Out-of-fold predictions were averaged at the participant level, and confidence intervals were obtained by bootstrap resampling of participants.</span> |
-| 12c | Model type, rationale, model-building steps, hyperparameter tuning, and internal validation are described. | Yes | Section 2.5; Supplementary Table S9 | Logistic regression was selected as the primary modeling approach. Regularization, class weighting, hyperparameter tuning, <span style="color:red">Platt recalibration</span>, and internal validation are described in Section 2.5. Non-linear classifier sensitivity comparisons are reported in Supplementary Table S9. |
+| 12c | Model type, rationale, model-building steps, hyperparameter tuning, and internal validation are described. | Yes | Section 2.5; Supplementary Table<span style="color:red">s</span> S9 <span style="color:red">and S15</span> | Logistic regression was selected as the primary modeling approach. Regularization, class weighting, hyperparameter tuning, <span style="color:red">Platt recalibration</span>, and internal validation are described in Section 2.5. Non-linear classifier sensitivity comparisons are reported in Supplementary Table S9. |
 | 12e | Performance measures and plots are specified. | Yes | Section 2.5; Section 3.2; Figure 1; Supplementary Figures S1–S3 <span style="color:red">and S5</span>; Supplementary Tables S4, S5, S8, <span style="color:red">S9, and S14</span> | AUROC, AUPRC, <span style="color:red">paired differences in AUROC,</span> Brier score, <span style="color:red">scaled Brier score,</span> calibration intercept, calibration slope, <span style="color:red">calibration-in-the-large, O/E ratio,</span> reliability plots, threshold-based operating characteristics, <span style="color:red">decision curves,</span> and non-linear model sensitivity comparisons are reported. |
 | 12g | Calculation of model predictions for evaluation is described. | Yes | Section 2.5 | <span style="color:red">Out-of-fold predicted probabilities were averaged at the participant level for discrimination analyses. Calibration, threshold-based, and decision-curve analyses used Platt-recalibrated out-of-fold predictions from one complete run of 10-fold cross-validation, with one prediction per participant.</span> |
 | 13 | Class imbalance handling and recalibration are described. | Yes | Section 2.5; Supplementary Tables S4–S5; Supplementary Figures S2–S3 | Class-weighted logistic regression was used, followed by <span style="color:red">Platt recalibration fitted within the training folds</span>. Calibration summaries are reported for primary outcomes and LGA sensitivity outcomes. |
@@ -302,3 +302,42 @@ Note. Fetal ultrasound percentiles were evaluated as single-predictor chart-base
 | Top 14% of predictors | 10 | 3.0 | 0.803 (0.752–0.851) | −0.025 (−0.057 to 0.007) | 1.010 | −0.016 | 0.985 |
 
 <span style="color:red">Table note: The analysis used 100 repetitions of stratified 10-fold cross-validation (6,371 pregnancies; 77 events). Within each outer training fold, predictors were ranked by their absolute standardized mean difference (Cohen's d), and the top 20% (13 predictors) or 14% (10 predictors) were retained; the validation fold was not used for ranking, and different folds could select different predictors. Within each outer training set, an inner 5-fold cross-validation was used to obtain out-of-fold scores, to which the Platt calibrator was fitted before application to the outer validation fold. The local approximate effective degrees of freedom were calculated for the penalized model with the given set of active predictors and exclude the intercept; they do not account for the degrees of freedom used by predictor selection. Because predictors were selected within each training fold, the AUROCs of the reduced models include the optimism of selection. Out-of-fold predictions were averaged for each participant across the repetitions, and confidence intervals were obtained by bootstrap resampling of participants; differences in AUROC were estimated by paired bootstrap resampling. The full model in this table was evaluated within the same framework and therefore differs slightly from the Combined model in Table S5. AUROC: area under the receiver operating characteristic curve; CITL: calibration-in-the-large; O/E: observed-to-expected ratio.</span>
+
+## <span style="color:red">Supplementary Table S15. Hyperparameter search spaces (New).</span>
+
+| Classifier | Hyperparameter | Search values |
+|---|---|---|
+| Logistic regression | C | 0.01, 0.05, 0.1, 0.3, 1 |
+| | Penalty | Elastic net |
+| | L1 ratio | 0.1, 0.3, 0.5, 0.7, 0.9 |
+| | Solver | SAGA |
+| | Maximum iterations | 50,000 |
+| | Tolerance | 1×10⁻⁴ |
+| | Class weight (negative : positive), birthweight >4000 g | 1:2, 1:3, 1:5, 1:7, 1:10, square root of the negative-to-positive ratio |
+| | Class weight (negative : positive), birthweight >4500 g | 1:2, 1:3, 1:5, 1:7, 1:10, square root of the negative-to-positive ratio |
+| Random forest | n_estimators | 300, 500, 800 |
+| | max_depth | None, 3, 5, 8, 12 |
+| | min_samples_leaf | 5, 10, 20, 40 |
+| | min_samples_split | 2, 10, 20, 50 |
+| | max_features | sqrt, 0.30, 0.50, 0.80 |
+| | bootstrap | True |
+| | Randomized-search draws | 12 |
+| XGBoost | n_estimators | 200, 400, 600, 900 |
+| | learning_rate | 0.01, 0.03, 0.05, 0.08, 0.10 |
+| | max_depth | 1, 2, 3, 4 |
+| | min_child_weight | 1, 5, 10, 20 |
+| | subsample | 0.60, 0.75, 0.90, 1.00 |
+| | colsample_bytree | 0.60, 0.75, 0.90, 1.00 |
+| | gamma | 0, 0.1, 0.5, 1.0, 5, 10 |
+| | reg_alpha | 0, 0.1, 0.5, 1.0 |
+| | reg_lambda | 1, 3, 5, 10 |
+| | Randomized-search draws | 18 |
+| Gradient boosting | n_estimators | 100, 200, 300, 500 |
+| | learning_rate | 0.01, 0.03, 0.05, 0.08, 0.10 |
+| | max_depth | 1, 2, 3 |
+| | min_samples_leaf | 5, 10, 20, 40 |
+| | subsample | 0.60, 0.80, 1.00 |
+| | max_features | None, sqrt, 0.50, 0.80 |
+| | Randomized-search draws | 12 |
+
+<span style="color:red">Table note: Hyperparameters were selected within each outer training fold using inner 3-fold cross-validation optimizing average precision; the validation fold was not used for tuning. 【待确认：logistic regression 的搜索方式（网格搜索还是随机搜索，若为随机搜索需注明抽样次数）】</span>

@@ -120,8 +120,7 @@ For calibration, threshold-based, and decision-curve analyses, averaging recalib
 
 We have expanded the description of the validation procedure in Section 2.5. The components requested by the reviewer are as follows.
 
-- **Penalty and hyperparameters:** the penalty and the regularization strength of the logistic regression models were tuned within the training data only. 【待补：搜索空间（penalty 候选类型、C 的取值范围）、优化指标、内层验证方式（如内层几折 CV）】
-- **Class weights:** class weights were computed within each training fold, with the negative class assigned a weight of 1 and the positive class weighted by the square root of the negative-to-positive sample ratio.
+- **Penalty and hyperparameters:** the hyperparameters of the logistic regression models, namely the regularization strength (C), the elastic-net L1 ratio, and the class weights, were tuned within the training data of each outer fold. Tuning used inner 3-fold cross-validation with average precision as the optimization metric. The full search spaces are now provided in the new Supplementary Table S15.
 - **Recalibration:** the Platt calibrator was fitted within the training folds only and applied to the held-out fold (see Comment 5).
 - **Combining repeated predictions:** the out-of-fold predictions were averaged across the repeated cross-validation runs at the participant level (Comment 3.1).
 - **Level of bootstrap resampling:** bootstrap resampling was conducted at the participant level, with 1,000 resamples; for differences between models, the same resampled participants were used for both models (paired bootstrap).
@@ -294,7 +293,7 @@ The Discussion and the limitations continue to state that the finding is post ho
 
 **9.4** *"If retained, the authors should report exposure-group and event counts, the exact definition of moderate alcohol exposure, the complete adjustment model, missing-data handling, multiplicity control, and a valid uncertainty analysis."*
 
-The complete adjustment model is stated in Section 3.4: maternal age, BMI, income, race and ethnicity, smoking, gravidity, and preexisting diabetes. 【待补：moderate alcohol intake 的具体定义（对应 AHEI 酒精评分的哪个区间）；暴露组和非暴露组的人数及 >4500 g 事件数；缺失数据的处理方式。若决定不补这些信息，此段需改写为说明该分析仅作探索性保留、不作进一步推断】 Because this analysis is exploratory and is not used to support the predictive findings, no formal multiplicity correction was applied, and this is reflected in the cautious interpretation in the Discussion.
+We thank the reviewer for these suggestions. In view of the reviewer's comment that this analysis is peripheral to the prediction objective, we have kept it as a brief exploratory analysis rather than expanding it. The alcohol-related variable is the alcoholic drinks component of the Alternative Healthy Eating Index-2010, which for women assigns the highest score to moderate intake (0.5–1.5 drinks/day), a lower score to non-drinkers, and the lowest score to heavy intake (≥2.5 drinks/day). This definition is now given in the note to Supplementary Table S6, and the complete adjustment model is stated in Section 3.4 and in the same table note. Because the analysis is exploratory and is not used to support the predictive findings, no formal multiplicity correction was applied. For the same reason, the finding is presented as hypothesis-generating only, and no causal or clinical inference is drawn from it.
 
 ## Comment 10. Figures, tables, and references
 
